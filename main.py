@@ -1,4 +1,8 @@
-def bubble_sort(arr: list):
+def bubble_sort(arr: list: list) -> list:
+    """
+    Performs a bubble sort in Python
+    """
+
     n = len(arr)
     for i in range(n):
         for j in range(0, n - i - 1):
@@ -7,7 +11,10 @@ def bubble_sort(arr: list):
 
     return arr
 
-# Example usage; this won't execute unless you run `main.py`
+# Example usage; this will only execute if you run `main.py`
 if __name__ == "__main__":
-    numbers = [64, 34, 25, 12, 22, 11, 90]
-    print(bubble_sort(numbers))
+    import random
+
+    n = 10 # Number of random numbers (exclusive)
+    numbers = [int(random.random() * 100) for x in range(n)]
+    print(selection_sort(numbers))
